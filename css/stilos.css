@@ -253,7 +253,7 @@ ul { list-style: none; }
 .servicio > .servicio-imagen,
 .servicio > .servicio-panel { width: 50%; }
 .servicio-imagen { margin: 0; }
-.servicio-imagen img { width: 600px; height: 637px; object-fit: cover; }
+.servicio-imagen img { width: 599px; height: 637px; object-fit: fill; }
 .servicio-panel {
     padding: 45px;
 }
@@ -286,8 +286,6 @@ ul { list-style: none; }
     height: 56px;
     border: 1px solid #F8AD00;
 }
-.servicio-panel .boton i { margin-right: 4px; }
-
 /* ================= CALLOUT 2 (estadísticas + productos + marcas) ================= */
 .callout2 {
     background: transparent;
@@ -548,7 +546,7 @@ ul { list-style: none; }
     grid-column: 1;
     grid-row: 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 307.484375px);
     align-content: start;
 }
 .certificaciones {
@@ -631,6 +629,7 @@ ul { list-style: none; }
     padding: 10px 15px 0;
 }
 .copyright a { color: #fff; }
+.copyright span { font-size: 15px; line-height: 1.2; color: #fff; }
 
 /* ================= BOTÓN FLOTANTE DE WHATSAPP ================= */
 .fab-wsp {
