@@ -1,0 +1,4 @@
+# Seguridad: nunca subir credenciales ni entornos privados
+.env
+*.local.php
+mail.local.php

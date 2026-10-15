@@ -1,0 +1,246 @@
+
+:root {
+    --colorBlanco: #FFF;
+    --colorNegro: #000;
+    --colorTexto: #2A2A2A;
+    --colorTexto2: #515151;
+    --color1: #F8AD00;
+    --color2: #081130;
+    --color3: #333;
+    --color4: #0C101B;
+    --color5: #424A53;
+    --colorExtra: #A09A9A;
+    --colorPlomo: #EFEFEF;
+}
+
+* {
+    transition: all 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+blockquote,
+ul li {
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: var(--colorTexto);
+}
+h1 { font-size: 35px; }
+h2 { font-size: 28px; }
+h3 { font-size: 37px; }
+h4 { font-size: 30px; }
+h5 { font-size: 50px; }
+p { font-size: 16px; line-height: 1.5; }
+
+img,
+span {
+    display: inline-block;
+}
+a,
+a:focus-visible {
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+}
+
+/* Fuentes */
+.popib {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.popibb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+.openr {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+/*Fondo*/
+.banners-fondo {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    margin-top: 130px;
+}
+@media (max-width: 1130px) {
+    main { margin-top: 89px; }
+}
+@media (max-width: 768px) {
+    main { margin-top: 50px; }
+}
+
+/* Layout (override de Bootstrap, igual que config.css) */
+.container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    max-width: 76.875em;
+    margin: 0 auto;
+}
+.row {
+    padding: 0;
+    margin: 0;
+}
+ul,
+ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Formulario*/
+form {
+    margin: 0 auto;
+    max-width: 710px;
+    width: 100%;
+    padding: 0;
+}
+form [type='text'], form [type='password'], form [type='date'], form [type='datetime'],
+form [type='datetime-local'], form [type='month'], form [type='week'], form [type='email'],
+form [type='number'], form [type='search'], form [type='tel'], form [type='time'],
+form [type='url'], form [type='color'], form textarea, form select {
+    font-size: 15px;
+    line-height: 22px;
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #838383;
+    height: 35px;
+    box-shadow: none !important;
+    color: var(--colorTexto);
+    outline: 0;
+    margin: 0;
+    padding: 10px 0;
+}
+form textarea,
+form textarea:focus {
+    resize: none;
+    padding: 5px 0;
+}
+form label {
+    font-size: 17px;
+    line-height: 21px;
+    color: var(--color4);
+}
+
+/* Callouts del formulario */
+.callout.primary, .callout.alert, .callout.success {
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: 10px 0 0;
+    color: #333;
+}
+.callout.primary { background-color: #def0fc; }
+.callout.alert { background-color: #ffe0e0; }
+.callout.success { background-color: #d9f7e6; }
+
+/* Header interno (header_footer.css -> header.h-interno) */
+.header {
+    background-color: var(--colorBlanco);
+}
+.header.flota {
+    background-color: var(--colorBlanco);
+    border-bottom: 1px solid var(--color2);
+}
+.header-info p {
+    color: var(--color2);
+}
+.header-info .redes a {
+    background-color: var(--color2);
+    color: var(--colorBlanco);
+}
+.menu li.active > a,
+.menu li > a.active {
+    color: var(--color1);
+}
+
+/* ============ contacto.css (original) ============ */
+.banner-cont {
+    height: 300px;
+    background-image: url(../img/banners/contacto.jpg);
+}
+p {
+    font-size: 18px;
+}
+.callout-1 {
+    padding: 100px 0;
+}
+.callout-1 h4 {
+    color: var(--color4);
+    font-size: 44px;
+}
+.callout-1 h5 {
+    color: var(--color2);
+    padding-left: 20px;
+    font-size: 20px;
+    display: inline-block;
+    padding-right: 40px;
+}
+.callout-1 h5 span {
+    color: var(--color1);
+    left: 0;
+}
+.callout-1 h5 img {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+.callout-1 .cuadro-contact {
+    background-color: var(--colorPlomo);
+}
+.callout-1 .cuadro-contact > div {
+    width: 50%;
+}
+.callout-1 .cuadro-contact > div:first-child {
+    padding: 40px;
+}
+.callout-1 .cuadro-contact h4 {
+    font-size: 30px;
+    color: var(--color4);
+}
+.callout-1 form .d-flex > fieldset {
+    width: 245px;
+}
+@media screen and (max-width: 980px) {
+    .banner-cont {
+        height: 190px;
+    }
+    .callout-1 .cuadro-contact > div {
+        width: 100%;
+    }
+    .callout-1 .cuadro-contact > div:first-child {
+        padding: 40px 20px;
+    }
+    .callout-1 .cuadro-contact > div:last-child {
+        display: none;
+    }
+    .callout-1 h5 {
+        padding-right: 0;
+    }
+    .callout-1 h5 img {
+        display: none;
+    }
+    .callout-1 form .d-flex > fieldset {
+        width: 100%;
+    }
+}

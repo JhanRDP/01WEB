@@ -1,0 +1,282 @@
+
+:root {
+    --colorBlanco: #FFF;
+    --colorNegro: #000;
+    --colorTexto: #2A2A2A;
+    --colorTexto2: #515151;
+    --color1: #F8AD00;
+    --color2: #081130;
+    --color3: #333;
+    --color4: #0C101B;
+    --color5: #424A53;
+    --colorExtra: #A09A9A;
+    --colorPlomo: #EFEFEF;
+    --colorRiel: #728496;
+}
+
+* {
+    transition: all 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+blockquote,
+ul li {
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: var(--colorTexto);
+}
+h1 { font-size: 35px; }
+h2 { font-size: 28px; }
+h3 { font-size: 37px; }
+h4 { font-size: 30px; }
+h5 { font-size: 50px; }
+p { font-size: 16px; line-height: 1.5; }
+
+img,
+span {
+    display: inline-block;
+}
+a,
+a:focus-visible {
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+}
+
+/* Fuentes */
+.popib {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.popibb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+.openr {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+/* Fondo */
+.banners-fondo {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    margin-top: 130px;
+}
+@media (max-width: 1130px) {
+    main { margin-top: 89px; }
+}
+@media (max-width: 768px) {
+    main { margin-top: 50px; }
+}
+
+/* Layout (override de Bootstrap, igual que config.css) */
+.container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    max-width: 76.875em;
+    margin: 0 auto;
+}
+.row {
+    padding: 0;
+    margin: 0;
+}
+ul,
+ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header interno (header_footer.css -> header.h-interno) */
+.header {
+    background-color: var(--colorBlanco);
+}
+.header.flota {
+    background-color: var(--colorBlanco);
+    border-bottom: 1px solid var(--color2);
+}
+.header-info p {
+    color: var(--color2);
+}
+.header-info .redes a {
+    background-color: var(--color2);
+    color: var(--colorBlanco);
+}
+.menu li.active > a,
+.menu li > a.active {
+    color: var(--color1);
+}
+
+/* ============ categoria.css ============ */
+.banner-cat {
+    height: 300px;
+    background-image: url(../img/banners/categoria.jpg);
+}
+
+/* Título */
+.cat-titulo {
+    padding-top: 50px;
+}
+.cat-etiqueta {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--colorTexto2);
+    padding-bottom: 2px;
+}
+.cat-titulo h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--color2);
+}
+
+/* Cuadrícula */
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    column-gap: 0;
+    row-gap: 75px;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 75px;
+}
+.cat-card {
+    width: 278px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    background: var(--colorBlanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 0;
+}
+.cat-card figure {
+    width: 100%;
+    max-width: 266px;
+    height: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.cat-card figure img {
+    max-width: 100%;
+    max-height: 289px;
+}
+.cat-card p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--colorTexto);
+    text-align: center;
+    height: 50px;
+    margin: 10px 0 5px;
+    padding: 0 10px;
+}
+.cat-ver {
+    display: block;
+    width: 100%;
+    max-width: 242px;
+    height: 47px;
+    line-height: 47px;
+    margin: 0 auto -23px;
+    border-radius: 30px;
+    background: var(--colorRiel);
+    color: var(--colorBlanco);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+.cat-ver:hover,
+.cat-ver:focus {
+    background: var(--color2);
+    color: var(--colorBlanco);
+    transition: all 0.5s ease;
+}
+
+/* Consúltanos por esta categoría */
+.cat-final {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 48px 0 80px;
+}
+.cat-final-txt {
+    flex: 1 1 0;
+    font-size: 30px;
+    line-height: 39px;
+    color: var(--colorTexto);
+    text-align: right;
+}
+.cat-final .wsp-pill {
+    flex: 1 1 0;
+    margin: 0;
+    text-align: left;
+}
+.cat-final .wsp-pill img {
+    margin: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .banner-cat {
+        height: 190px;
+    }
+    .cat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 16px;
+        row-gap: 40px;
+        padding-bottom: 40px;
+    }
+    .cat-card {
+        width: 100%;
+    }
+    .cat-card figure {
+        height: 200px;
+    }
+    .cat-card figure img {
+        max-height: 200px;
+    }
+    .cat-ver {
+        margin-bottom: 12px;
+    }
+    .cat-final {
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 40px 0 48px;
+    }
+    .cat-final-txt {
+        flex: 1 1 100%;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.3;
+    }
+}

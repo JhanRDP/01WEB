@@ -1,0 +1,414 @@
+
+:root {
+    --colorBlanco: #FFF;
+    --colorNegro: #000;
+    --colorTexto: #2A2A2A;
+    --colorTexto2: #515151;
+    --color1: #F8AD00;
+    --color2: #081130;
+    --color3: #333;
+    --color4: #0C101B;
+    --color5: #424A53;
+    --colorExtra: #A09A9A;
+    --colorPlomo: #EFEFEF;
+    --colorRiel: #728496;
+}
+
+* {
+    transition: all 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+blockquote,
+ul li {
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: var(--colorTexto);
+}
+h1 { font-size: 35px; }
+h2 { font-size: 28px; }
+h3 { font-size: 37px; }
+h4 { font-size: 30px; }
+h5 { font-size: 50px; }
+p { font-size: 16px; line-height: 1.5; }
+
+img,
+span {
+    display: inline-block;
+}
+a,
+a:focus-visible {
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+}
+
+/* Fuentes */
+.popib {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.popibb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+.openr {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+/* Fondo */
+.banners-fondo {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    margin-top: 130px;
+}
+@media (max-width: 1130px) {
+    main { margin-top: 89px; }
+}
+@media (max-width: 768px) {
+    main { margin-top: 50px; }
+}
+
+/* Layout (override de Bootstrap, igual que config.css) */
+.container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    max-width: 76.875em;
+    margin: 0 auto;
+}
+.row {
+    padding: 0;
+    margin: 0;
+}
+ul,
+ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header interno (header_footer.css -> header.h-interno) */
+.header {
+    background-color: var(--colorBlanco);
+}
+.header.flota {
+    background-color: var(--colorBlanco);
+    border-bottom: 1px solid var(--color2);
+}
+.header-info p {
+    color: var(--color2);
+}
+.header-info .redes a {
+    background-color: var(--color2);
+    color: var(--colorBlanco);
+}
+.menu li.active > a,
+.menu li > a.active {
+    color: var(--color1);
+}
+
+/* ============ producto.css ============ */
+
+/* Barra de breadcrumb */
+.prod-barra {
+    background: var(--colorRiel);
+}
+.prod-barra-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 98px;
+    padding: 60px 0 20px;
+}
+.prod-barra h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--colorBlanco);
+    margin: 0;
+}
+.prod-retor {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--colorBlanco);
+}
+.prod-retor:hover,
+.prod-retor:focus {
+    color: var(--colorBlanco);
+    text-decoration: underline;
+}
+
+/* Ficha del producto (sin tarjeta exterior, igual que la web original) */
+.prod-card {
+    margin: 40px 0 0;
+    padding: 0 0 100px;
+}
+.prod-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+}
+.prod-izq,
+.prod-der {
+    width: calc(50% - 15px);
+    padding: 0;
+}
+
+/* Foto con flechas */
+.prod-foto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 502px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    padding: 10px;
+}
+.prod-foto img {
+    max-height: 480px;
+}
+.prod-flecha {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--color3);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorBlanco);
+    color: var(--color3);
+    font-size: 16px;
+}
+.prod-flecha-prev { left: 18px; }
+.prod-flecha-next { right: 18px; }
+
+/* Compartir */
+.prod-compartir {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.prod-compartir p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--colorTexto);
+    margin: 0;
+}
+.prod-share {
+    display: flex;
+    gap: 4px;
+}
+.prod-share a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: #0866FF;
+    color: var(--colorBlanco);
+    font-size: 16px;
+}
+.prod-share a:nth-child(2) { background: #12AF0A; }
+.prod-share a:nth-child(3) { background: #007BB5; }
+.prod-share a:nth-child(4) { background: #2CA5E0; }
+.prod-share a:hover,
+.prod-share a:focus {
+    opacity: .8;
+}
+
+/* Datos del producto */
+.prod-der h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--color4);
+    margin: 0;
+    padding-bottom: 24px;
+}
+.prod-dato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+}
+.prod-chip {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 98px;
+    background: var(--colorRiel);
+    color: var(--colorBlanco);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    padding-left: 18px;
+    border-radius: 0;
+}
+.prod-val {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: var(--colorTexto);
+}
+.prod-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--color3);
+    margin: 0;
+    padding: 24px 0;
+}
+
+/* Detalle */
+.prod-det-tit {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--colorTexto);
+    border-bottom: 1px dashed #B1B1B1;
+    padding-bottom: 5px;
+    margin: 0 0 20px;
+}
+.prod-detalle {
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+.prod-detalle li {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--color3);
+    list-style: disc;
+}
+.prod-detalle strong {
+    font-weight: 700;
+}
+
+/* Ficha técnica */
+.prod-ficha {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 6px 18px 6px 6px;
+    margin: 22px 0 0;
+    background: var(--colorBlanco);
+}
+.prod-ficha img {
+    width: 52px;
+}
+.prod-ficha span {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: .4px;
+    color: var(--color3);
+}
+.prod-ficha:hover,
+.prod-ficha:focus {
+    border-color: var(--color2);
+}
+
+/* Píldora de WhatsApp */
+.prod-wsp {
+    display: block;
+    margin: 24px 0 0;
+    width: 358px;
+}
+.prod-wsp img {
+    width: 358px;
+}
+
+/* Banda inferior */
+.prod-banda {
+    background: var(--colorPlomo);
+    text-align: center;
+    padding: 52px 16px 58px;
+    margin-top: 36px;
+}
+.prod-banda-sub {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: var(--color3);
+    padding-bottom: 10px;
+}
+.prod-banda-tit {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    color: var(--color2);
+    padding-bottom: 26px;
+}
+.prod-banda .boton {
+    display: inline-block;
+    width: auto;
+    min-width: 216px;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 26px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 980px) {
+    .prod-barra-in {
+        height: 72px;
+        padding: 20px 0;
+    }
+    .prod-row {
+        gap: 24px;
+    }
+    .prod-izq,
+    .prod-der {
+        width: 100%;
+    }
+    .prod-foto {
+        min-height: 320px;
+    }
+    .prod-foto img {
+        max-height: 300px;
+    }
+    .prod-banda-tit {
+        font-size: 24px;
+    }
+}
