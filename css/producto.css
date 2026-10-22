@@ -140,7 +140,7 @@ ol {
     justify-content: space-between;
     align-items: flex-start;
     height: 98px;
-    padding: 60px 0 20px;
+    padding: 60px 15px 20px;
 }
 .prod-barra h4 {
     font-family: 'Nunito', sans-serif;
@@ -151,6 +151,7 @@ ol {
     margin: 0;
 }
 .prod-retor {
+    flex-shrink: 0;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -353,9 +354,11 @@ ol {
     display: block;
     margin: 24px 0 0;
     width: 358px;
+    max-width: 100%;
 }
 .prod-wsp img {
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
 }
 
 /* Banda inferior */
@@ -392,23 +395,45 @@ ol {
 
 @media screen and (max-width: 980px) {
     .prod-barra-in {
-        height: 72px;
-        padding: 20px 0;
+        height: auto;
+        padding: 20px 15px;
     }
+    .prod-chip {
+        width: 75px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .prod-val {
+        font-size: 14px;
+    }
+    .prod-banda-tit {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
     .prod-row {
-        gap: 24px;
+        gap: 0;
     }
     .prod-izq,
     .prod-der {
         width: 100%;
     }
-    .prod-foto {
-        min-height: 320px;
+}
+
+@media (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        line-height: 1;
     }
-    .prod-foto img {
-        max-height: 300px;
+    .prod-barra h4 {
+        line-height: 1;
     }
-    .prod-banda-tit {
-        font-size: 24px;
+    .prod-der h2 {
+        font-size: 23px;
+        line-height: 1;
     }
 }
