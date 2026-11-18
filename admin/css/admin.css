@@ -1,0 +1,374 @@
+/* ============================================================
+   ELECTRIC — Panel administrativo (solo admin/)
+   No altera el diseño público.
+   ============================================================ */
+
+.admin-wrap {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.admin-nav {
+    background: #081130;
+    border-bottom: 4px solid #F8AD00;
+}
+
+.admin-nav .contenedor {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 15px;
+}
+
+.admin-nav .brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F8AD00;
+    margin-right: 24px;
+}
+
+.admin-nav a {
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.admin-nav a:hover,
+.admin-nav a.activo {
+    background: rgba(248, 173, 0, 0.15);
+}
+
+.admin-nav .btn-salir {
+    margin-left: auto;
+    background: #8a1f1f;
+    color: #fff;
+}
+
+.admin-nav .btn-salir:hover {
+    background: #6b1717;
+}
+
+.admin-page {
+    padding: 28px 0;
+}
+
+.admin-page h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #081130;
+    margin: 0 0 8px 0;
+    font-size: 24px;
+}
+
+.admin-sub {
+    color: #515151;
+    font-size: 15px;
+    margin: 0 0 24px 0;
+}
+
+.msg {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+.msg.ok {
+    background: #d9f7e6;
+    color: #2d5a27;
+    border: 1px solid #b7e4a7;
+}
+.msg.err {
+    background: #ffe0e0;
+    color: #833;
+    border: 1px solid #f5bab9;
+}
+.msg.inf {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.tabla-wrap {
+    overflow-x: auto;
+}
+
+table.admin-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+table.admin-tabla th {
+    background: #081130;
+    color: #fff;
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+table.admin-tabla td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+table.admin-tabla tr:last-child td {
+    border-bottom: none;
+}
+
+table.admin-tabla tr:hover td {
+    background: #fafafa;
+}
+
+.estado {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+}
+.estado.activa {
+    background: #e7f7ea;
+    color: #2d5a27;
+}
+.estado.oculta {
+    background: #fdecea;
+    color: #8a1f1f;
+}
+
+.form-card {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.form-card h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #081130;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    border-bottom: 2px solid #F8AD00;
+    padding-bottom: 8px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    color: #081130;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.campo input[type="text"],
+.campo input[type="file"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #B1B1B1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo .nota {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.campo .err {
+    color: #8a1f1f;
+    font-size: 12.5px;
+    margin-top: 5px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-guardar {
+    background: #F8AD00;
+    color: #081130;
+}
+.btn-guardar:hover {
+    background: #081130;
+    color: #fff;
+}
+
+.btn-sec {
+    background: #fff;
+    border: 1px solid #B1B1B1;
+    color: #081130;
+}
+.btn-sec:hover {
+    background: #f2f2f2;
+}
+
+.btn-peligro {
+    background: #8a1f1f;
+    color: #fff;
+}
+.btn-peligro:hover {
+    background: #6b1717;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-radius: 20px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    align-items: flex-end;
+}
+
+.filtros .campo {
+    margin-bottom: 0;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+.paginacion a,
+.paginacion span {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+    color: #081130;
+    text-decoration: none;
+}
+.paginacion a:hover {
+    background: #f2f2f2;
+}
+.paginacion span.actual {
+    background: #F8AD00;
+    color: #081130;
+    border-color: #F8AD00;
+    font-weight: 700;
+}
+
+.galeria {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.img-item {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    width: 160px;
+    height: 120px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-item .acciones {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    gap: 4px;
+}
+
+.img-item .principal {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.sin-datos {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .admin-nav .contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .admin-nav .brand {
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .admin-nav .btn-salir {
+        margin-left: 0;
+    }
+    .botones {
+        flex-direction: column;
+    }
+    .botones .btn {
+        width: 100%;
+    }
+}

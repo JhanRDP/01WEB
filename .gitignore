@@ -1,4 +1,15 @@
-# Seguridad: nunca subir credenciales ni entornos privados
+
+# Seguridad: configuraciones y credenciales privadas
 .env
+.env.*
 *.local.php
 mail.local.php
+config/
+storage/
+uploads/
+
+# Archivos temporales y del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
