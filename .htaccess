@@ -1,0 +1,8 @@
+# Deshabilitar el listado de directorios
+Options -Indexes
+
+# Bloquear acceso web al repositorio Git
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule (^|/)\.git(/|$) - [F,L]
+</IfModule>
